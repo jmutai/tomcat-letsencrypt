@@ -23,3 +23,16 @@ EMAIL_NOTIFICATION="email_address"
 ```
 
 Save the changes then:
+
+```
+$ chmod +x tomcat-letsencrypt-autorenew.sh
+$ sudo cp tomcat-letsencrypt-autorenew.sh /usr/local/bin
+```
+
+The execute the script with:
+
+```
+$ sudo su -
+# /usr/local/bin tomcat-letsencrypt-autorenew.sh
+```
+

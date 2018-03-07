@@ -16,9 +16,10 @@ $ cd tomcat-letsencrypt
 Once you have cloned the repo or downloaded the script. There are few variables that you need to define before you're ready to execute the script. These file to edit is `tomcat-letsencrypt-autorenew.sh`
 
 ```
-TOMCAT_DOMAIN="odk2.kenphia.co.ke"
-TOMCAT_PASS="ughubieVahfaej5"
+TOMCAT_DOMAIN=""
+TOMCAT_KEY_PASS=""
 CERTBBOT_BIN="/usr/local/bin/certbot-auto"
-EMAIL_NOTIFICATION="email_address
+EMAIL_NOTIFICATION="email_address"
 ```
 
+Save the changes then:

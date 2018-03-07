@@ -36,3 +36,20 @@ $ sudo su -
 # /usr/local/bin tomcat-letsencrypt-autorenew.sh
 ```
 
+If you don't need email notification. you can skip the `send_email_notification` function.
+
+### Set cron job
+
+To have a cron job run daily, checking if cert is due for renewal
+
+```
+# crontab -e
+```
+
+Add:
+
+```
+30 3 * * * /usr/local/bin tomcat-letsencrypt-autorenew.sh
+```
+
+This means it will be running everyday at 3 am for checks.

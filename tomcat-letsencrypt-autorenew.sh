@@ -54,7 +54,7 @@ send_email_notification () {
             echo "Letsencrypt ssl certificate for $DOMAIN successfully renewed by cron job." >> /tmp/success
             echo "" >> /tmp/success
             echo "Tomcat successfully restarted after renewal" >> /tmp/success
-            mail -s "$DOMAIN Letsencrypt renewal" support-notify@angani.co < /tmp/success
+            mail -s "$DOMAIN Letsencrypt renewal" $EMAIL_NOTIFICATION < /tmp/success
         else
             echo "" > /tmp/failure
             echo "Letsencrypt ssl certificate for $DOMAIN renewal by cron job failed." >> /tmp/failure

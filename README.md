@@ -1,8 +1,8 @@
 # Tomcat letsencrypt renewal with Cron job
 
-This script is to help you automate the process of renewing Letsencrypt ssl certficate on Tomcat server. There is a good tutorial for the initial setup of [Tomcat with Letsencrypt SSL certificate](https://computingforgeeks.com/tomcat-7-with-letsencrypt-ssl-certificate/) avilable on my blog.
+This script is to help you automate the process of renewing Letsencrypt ssl certficate on Tomcat server. There is a good tutorial for the initial setup of [Tomcat with Letsencrypt SSL certificate](https://computingforgeeks.com/tomcat-7-with-letsencrypt-ssl-certificate/) available on my blog.
 
-For more details on prerequistes for this script, visit the page > [Bash Script to Auto-renew Letsencrypt SSL certificate on Tomcat](bash-script-to-auto-renew-letsencrypt-ssl-certificate-on-tomcat). It has all the details you need for both Debian based distributions and CentOS.
+For more details on prerequistes for this script, visit the page > [Bash Script to Auto-renew Letsencrypt SSL certificate on Tomcat](https://computingforgeeks.com/bash-script-to-auto-renew-letsencrypt-ssl-certificate-on-tomcat/). It has all the details you need for both Debian based distributions and CentOS.
 
 ## Using the script
 
@@ -33,7 +33,7 @@ The execute the script with:
 
 ```
 $ sudo su -
-# /usr/local/bin tomcat-letsencrypt-autorenew.sh
+# /usr/local/bin/tomcat-letsencrypt-autorenew.sh
 ```
 
 If you don't need email notification. you can skip the `send_email_notification` function.
@@ -43,13 +43,13 @@ If you don't need email notification. you can skip the `send_email_notification`
 To have a cron job run daily, checking if cert is due for renewal
 
 ```
-# crontab -e
+$ sudo crontab -e
 ```
 
 Add:
 
 ```
-30 3 * * * /usr/local/bin tomcat-letsencrypt-autorenew.sh
+30 3 * * * /usr/local/bin/tomcat-letsencrypt-autorenew.sh
 ```
 
 This means it will be running everyday at 3 am for checks.

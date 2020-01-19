@@ -2,7 +2,7 @@
 set -ex
 DOMAIN=""
 TOMCAT_KEY_PASS=""
-CERTBBOT_BIN="/usr/local/bin/certbot-auto"
+CERTBOT_BIN="/usr/local/bin/certbot-auto"
 EMAIL_NOTIFICATION="email_address"
 
 # Install certbot

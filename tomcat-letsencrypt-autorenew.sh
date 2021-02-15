@@ -34,8 +34,7 @@ renew_ssl () {
        -in /etc/letsencrypt/live/$DOMAIN/fullchain.pem \
        -inkey /etc/letsencrypt/live/$DOMAIN/privkey.pem \
        -name tomcat
- fi
- }
+
 
       # Convert that PKCS12 to a JKS
     rm -f /etc/ssl/${DOMAIN}.jks 2>/dev/null
@@ -43,7 +42,8 @@ renew_ssl () {
       -destkeystore /etc/ssl/${DOMAIN}.jks -srckeystore /tmp/${DOMAIN}_fullchain_and_key.p12  \
       -srcstoretype PKCS12 -srcstorepass $TOMCAT_KEY_PASS \
       -alias tomcat
-
+ fi
+ }
 # Send email notification on completion
 send_email_notification () {
     if [[ $? -eq "0" ]]; then
